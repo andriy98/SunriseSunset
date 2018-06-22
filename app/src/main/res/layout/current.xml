@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_gravity="center"
+    >
+
+    <TextView
+        android:id="@+id/textView2"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:layout_marginTop="60dp"
+        android:textAlignment="center"
+        android:text="Press button to get information for current location" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/get_info"
+        android:layout_width="match_parent"
+        android:layout_height="151dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_info_black_24dp"
+        app:cb_color="#03304f" />
+
+
+</LinearLayout>

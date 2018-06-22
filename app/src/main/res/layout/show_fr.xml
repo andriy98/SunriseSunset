@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <TextView
+        android:id="@+id/cur_lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/cur_long"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+    <ImageView
+        android:id="@+id/sunrise"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="10dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/sunrise" />
+
+    <TextView
+        android:id="@+id/first_light"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sunrise_text"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Sunrise time:" />
+
+    <TextView
+        android:id="@+id/sunrise_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_orange_light"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="match_parent"
+        android:layout_height="130dp"
+        android:layout_marginTop="5dp"
+        android:scaleType="fitXY"
+        app:srcCompat="@drawable/sunset" />
+
+    <TextView
+        android:id="@+id/last_light"
+        android:layout_width="match_parent"
+
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/sunset_text"
+        android:layout_width="match_parent"
+        android:textSize="18sp"
+        android:textAlignment="center"
+        android:textStyle="bold"
+        android:layout_height="wrap_content"
+        android:text="Sunset time:" />
+
+    <TextView
+        android:id="@+id/sunset_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:textAlignment="center"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+    <TextView
+        android:id="@+id/day_length_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        android:textStyle="bold" />
+
+
+
+
+
+</LinearLayout>
