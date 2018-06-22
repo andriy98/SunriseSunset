@@ -143,8 +143,8 @@ public class Show_fragment extends Fragment {
                 last_ligth.setText("Last light at "+jsonRes.getString("civil_twilight_end"));
                 sunset.setText(jsonRes.getString("sunset"));
                 day_length.setText("Day length: " + jsonRes.getString("day_length"));
-                cur_long.setText("Current longitude: "+longt);
-                cur_lat.setText("Current latitude: "+lat);
+                cur_long.setText("Longitude: "+longt);
+                cur_lat.setText("Latitude: "+lat);
             } catch (JSONException e) {
                 e.printStackTrace();
             }finally {

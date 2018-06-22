@@ -8,8 +8,9 @@ import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.location.Location;
 import android.location.LocationManager;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
 import android.os.Bundle;
-import android.os.Handler;
 import android.provider.Settings;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
@@ -19,12 +20,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.Button;
 import android.widget.TextView;
 import android.widget.Toast;
-
-
-import org.json.JSONException;
 
 import at.markushi.ui.CircleButton;
 
@@ -35,6 +32,7 @@ public class Main_fragment extends Fragment {
     private CircleButton get_info;
     private static final int REQUEST_LOCATION = 1;
     private LocationManager locationManager;
+    private TextView text;
     private String lattitude,longitude;
     private Show_fragment show_fragment;
     @Override
@@ -49,7 +47,16 @@ public class Main_fragment extends Fragment {
         view = inflater.inflate(LAYOUT, container, false);
         ((AppCompatActivity)getActivity()).getSupportActionBar().show();
         get_info = view.findViewById(R.id.get_info);
+        text = view.findViewById(R.id.textView2);
         show_fragment = new Show_fragment();
+        ConnectivityManager connectivityManager =
+                (ConnectivityManager) getActivity().getSystemService(Context.CONNECTIVITY_SERVICE);
+        NetworkInfo networkinfo = connectivityManager.getActiveNetworkInfo();
+        if (networkinfo == null) {
+            get_info.setVisibility(View.INVISIBLE);
+            text.setVisibility(View.INVISIBLE);
+            Toast.makeText(getContext(), "Check your internet connection !",Toast.LENGTH_LONG).show();
+        }
         get_info.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

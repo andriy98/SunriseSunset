@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    >
+
+
+    <LinearLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+
+
+
+        <EditText
+            android:id="@+id/search"
+            android:layout_width="251dp"
+            android:layout_height="wrap_content"
+            android:hint="Enter city name" />
+
+        <Button
+            android:id="@+id/but_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:shadowColor="#03304f"
+            android:text="SEARCH" />
+
+
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="26sp"
+        android:textStyle="bold"
+        />
+    <TextView
+        android:id="@+id/cur_lat"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+    <TextView
+        android:id="@+id/cur_long"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/textView2"
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="Press button to get information about this city"
+        android:textAlignment="center"
+        android:textSize="24sp" />
+
+    <at.markushi.ui.CircleButton
+        android:id="@+id/get_info"
+        android:layout_width="match_parent"
+        android:layout_height="151dp"
+        android:layout_marginTop="20dp"
+        android:src="@drawable/ic_info_black_24dp"
+        app:cb_color="#03304f" />
+
+</LinearLayout>
